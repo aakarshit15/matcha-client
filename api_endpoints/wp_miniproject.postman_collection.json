@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "27d15f2d-8d96-4f3a-bf09-14c238e4cc9a",
+		"name": "wp_miniproject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "41800023"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "localhost:3000/api/auth/register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Aatmaj\",\r\n    \"email\":\"aatmajrakshe@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/auth/login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWFlNjA0ZDljYmM3ZDkzYzY1YmQzNCIsInJvbGUiOiJjb21wYW55IiwiaWF0IjoxNzYzMzcwNTAwLCJleHAiOjE3NjM5NzUzMDB9.uXBT17gaY0lMsKT2iULNRr2p-YvEfhUOi0WUqGi8ELE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"aatmajrakshe@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "localhost:3000/api/auth/login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWFlNjA0ZDljYmM3ZDkzYzY1YmQzNCIsInJvbGUiOiJjb21wYW55IiwiaWF0IjoxNzYzMzcwNTAwLCJleHAiOjE3NjM5NzUzMDB9.uXBT17gaY0lMsKT2iULNRr2p-YvEfhUOi0WUqGi8ELE"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"adityagupta5277@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/auth/register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Aditya\",\r\n    \"email\":\"adityagupta5277@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"role\":\"company\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/auth/register"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jobs",
+			"item": [
+				{
+					"name": "localhost:3000/api/jobs/691ae6add9cbc7d93c65bd37",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/api/jobs/691ae6add9cbc7d93c65bd37"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/jobs/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWFlNjA0ZDljYmM3ZDkzYzY1YmQzNCIsInJvbGUiOiJjb21wYW55IiwiaWF0IjoxNzYzMzcwNTM0LCJleHAiOjE3NjM5NzUzMzR9.yOBNCUhRtiPcTEklEeHc8zNx3Bul3j0qMAI7Ln1n8xA"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Backend Developer\",\r\n  \"location\": \"Bengaluru, India\",\r\n  \"description\": \"We are looking for a Node.js backend developer to build REST APIs and manage databases.\",\r\n  \"requirements\": [\r\n    \"Strong knowledge of Node.js\",\r\n    \"Experience with MongoDB\",\r\n    \"Understanding of REST APIs\",\r\n    \"Familiarity with Git\"\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/jobs/"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/jobs/",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/api/jobs/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "applications",
+			"item": [
+				{
+					"name": "localhost:3000/api/applications/apply",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWFlNzJkZDljYmM3ZDkzYzY1YmQzZSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzYzMzcwODk1LCJleHAiOjE3NjM5NzU2OTV9.4UEW6GSCv0kYCB5DNA-vgFcVz192PYRRwvJerZG42O8"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "jobId",
+									"value": "691ae6add9cbc7d93c65bd37",
+									"type": "text"
+								},
+								{
+									"key": "resume",
+									"type": "file",
+									"src": "/C:/Users/Aditya/Downloads/Aditya_Gupta.pdf"
+								},
+								{
+									"key": "name",
+									"value": "Aatmaj",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "aatmajrakshe@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": "localhost:3000/api/applications/apply"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/applications/job/691ae6add9cbc7d93c65bd37",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWFlNjA0ZDljYmM3ZDkzYzY1YmQzNCIsInJvbGUiOiJjb21wYW55IiwiaWF0IjoxNzYzMzk0MjcwLCJleHAiOjE3NjM5OTkwNzB9.UVIvbP02y_WL9jGRgQzm91lBva50rziT22eVZC727HM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/applications/job/691ae6add9cbc7d93c65bd37"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
