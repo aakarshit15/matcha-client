@@ -1,5 +1,4 @@
 import { CreatePosting } from '@/components/CreatePosting'
-import React from 'react'
 
 const CreatePostingPage = () => {
   return (

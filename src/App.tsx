@@ -14,17 +14,6 @@ import { useState } from 'react';
 
 function App() {
 
-  const posting = {
-        title: "Backend Developer",
-        location: "Bengaluru, India",
-        description: "We are looking for a Node.js backend developer to build REST APIs and manage databases.",
-        requirements: [
-            "Strong knowledge of Node.js",
-            "Experience with MongoDB",
-            "Understanding of REST APIs",
-            "Familiarity with Git"
-        ]
-    }
   
   const [client, setClient] = useState();
 

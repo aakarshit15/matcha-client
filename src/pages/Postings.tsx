@@ -1,5 +1,4 @@
 import JobPostingCard from '@/components/JobPostingCard';
-import type { Posting } from '@/types/posting';
 import { useEffect, useState } from 'react';
 import axios from "axios";
 
