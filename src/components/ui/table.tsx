@@ -6,7 +6,7 @@ import { ThemeProviderContext } from "../theme-provider"
 function Table({ className, ...props }: React.ComponentProps<"table">) {
 
   console.log(React.useContext(ThemeProviderContext));
-  const {theme, _setTheme }:any = React.useContext(ThemeProviderContext);
+  const {theme }:any = React.useContext(ThemeProviderContext);
 
   return (
     <div
@@ -24,7 +24,7 @@ function Table({ className, ...props }: React.ComponentProps<"table">) {
 
 function TableHeader({ className, ...props }: React.ComponentProps<"thead">) {
   console.log(React.useContext(ThemeProviderContext));
-  const {theme, _setTheme }:any = React.useContext(ThemeProviderContext);
+  const {theme }:any = React.useContext(ThemeProviderContext);
   return (
     <thead
       data-slot="table-header"
@@ -37,7 +37,7 @@ function TableHeader({ className, ...props }: React.ComponentProps<"thead">) {
 function TableBody({ className, ...props }: React.ComponentProps<"tbody">) {
 
   console.log(React.useContext(ThemeProviderContext));
-  const {theme, _setTheme }:any = React.useContext(ThemeProviderContext);
+  const {theme }:any = React.useContext(ThemeProviderContext);
 
   return (
     <tbody
@@ -63,7 +63,7 @@ function TableFooter({ className, ...props }: React.ComponentProps<"tfoot">) {
 
 function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
   console.log(React.useContext(ThemeProviderContext));
-  const {theme, _setTheme }:any = React.useContext(ThemeProviderContext);
+  const {theme }:any = React.useContext(ThemeProviderContext);
   return (
     <tr
       data-slot="table-row"
@@ -79,7 +79,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
 function TableHead({ className, ...props }: React.ComponentProps<"th">) {
 
   console.log(React.useContext(ThemeProviderContext));
-  const {theme, _setTheme }:any = React.useContext(ThemeProviderContext);
+  const {theme }:any = React.useContext(ThemeProviderContext);
 
   return (
     <th
@@ -96,7 +96,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
 function TableCell({ className, ...props }: React.ComponentProps<"td">) {
 
   console.log(React.useContext(ThemeProviderContext));
-  const {theme, _setTheme }:any = React.useContext(ThemeProviderContext);
+  const {theme }:any = React.useContext(ThemeProviderContext);
 
   return (
     <td
