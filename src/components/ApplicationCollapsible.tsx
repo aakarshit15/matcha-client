@@ -39,7 +39,7 @@ export default function ApplicationCollapsible(props: any) {
             Yes. Free to use for personal and commercial projects. No attribution
             required.
           </div> */}
-          <ApplicationsTable posting={props.posting} className="w-full border-5 rounded-md" />
+          <ApplicationsTable posting={props.posting} className="w-full border-4 rounded-md" />
         </CollapsibleContent>
       </Collapsible>
     </div>

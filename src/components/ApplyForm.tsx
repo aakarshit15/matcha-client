@@ -17,9 +17,11 @@ import { UserContext } from "@/contexts/userAndToken"
 import type { Posting } from "@/types/posting"
 import axios from "axios"
 import { useContext, useEffect, useState } from "react"
-import { useNavigate } from "react-router"
+import { useNavigate, useParams } from "react-router"
 
 export function ApplyForm({ posting, ...props }: React.ComponentProps<typeof Card> & { posting: Posting }) {
+
+  const params = useParams();
 
   const {
     title,
@@ -38,9 +40,9 @@ useEffect(() => {
   }, []);
 
   const [formData, setFormData] = useState({
-    jobId: "",
-    name: `${client?.user?.name}`,
-    email: `${client?.user?.email}`,
+    jobId: params.id || "",
+    name: `${client?.user?.name}` || "",
+    email: `${client?.user?.email}` || "",
     resume: null as File | null
   });
 
@@ -54,6 +56,7 @@ useEffect(() => {
 
   const handleFileChange = (e: any) => {
     e.preventDefault();
+    console.log("Files: ", e.target.files[0]);
     if (e.target.files) {
         setFormData({
             ...formData,
@@ -71,10 +74,14 @@ useEffect(() => {
         postReqData.append("name", formData.name);
         postReqData.append("email", formData.email);
         if (formData.resume) {
-            postReqData.append('resume', formData.resume, formData.resume.name);
+          postReqData.append('resume', formData.resume, formData.resume.name);
         } else {
-            console.error("Resume file is missing.");
-            return; 
+          console.error("Resume file is missing.");
+          return; 
+        }
+        console.log(postReqData);
+        for (let [key, value] of postReqData.entries()) {
+          console.log(key, value);
         }
         const response = await axios.post(`${import.meta.env.VITE_API_URL}/applications/apply`, postReqData, {
             headers: {

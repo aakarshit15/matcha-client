@@ -31,7 +31,7 @@ const Applications = () => {
         <div className="flex flex-col justify-center items-center w-full my-20">
             {
                 postings.map((posting, index) => {
-                    return <ApplicationCollapsible key={index} posting={posting} /> 
+                    return <ApplicationCollapsible className={"w-fit"} key={index} posting={posting} /> 
                 })
             }
         </div>

@@ -39,10 +39,10 @@ export function ApplicationsTable({ ...props }) {
       <TableHeader>
         <TableRow>
           <TableHead className="w-[100px]">Name</TableHead>
-          <TableHead>Email</TableHead>
-          <TableHead>Similarity Score</TableHead>
-          <TableHead>Resume Link</TableHead>
-          <TableHead>Matched Skilss</TableHead>
+          <TableHead className="">Email</TableHead>
+          <TableHead className="">Similarity Score</TableHead>
+          <TableHead className="">Resume Link</TableHead>
+          <TableHead className="">Matched Skilss</TableHead>
           <TableHead className="text-right">Applied At</TableHead>
         </TableRow>
       </TableHeader>
@@ -61,9 +61,10 @@ export function ApplicationsTable({ ...props }) {
     } */}
         {applications.map((post: any, index: any) => (
           <TableRow key={index}>
+            <TableCell>{post.name}</TableCell>
             <TableCell className="font-medium">{post.email}</TableCell>
             <TableCell>{post.similarityScore}</TableCell>
-            <TableCell>{post.resumeUrl}</TableCell>
+            <TableCell><a href={post.resumeUrl} className="underline">[LINK]</a></TableCell>
             <TableCell>{post.matchedSkills.join(", ")}</TableCell>
             <TableCell className="text-right">{post.appliedAt}</TableCell>
           </TableRow>
